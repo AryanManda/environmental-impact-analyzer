@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: environmental-impact-api
+    env: node
+    buildCommand: cd backend/api && npm install && npm run build
+    startCommand: cd backend/api && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ML_SERVICE_URL
+        value: https://environmental-impact-ml.onrender.com
+
+  - type: web
+    name: environmental-impact-ml
+    env: python
+    buildCommand: cd backend/ml_service && pip install -r requirements.txt
+    startCommand: cd backend/ml_service && python app.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.0 

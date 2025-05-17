@@ -1,0 +1,26 @@
+{
+  "name": "environmental-impact-analyzer-api",
+  "version": "1.0.0",
+  "description": "Backend API for Environmental Impact Analyzer",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.ts",
+    "build": "tsc",
+    "test": "jest"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "mongoose": "^7.0.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.22",
+    "@types/node": "^18.19.100",
+    "express": "^5.1.0",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
